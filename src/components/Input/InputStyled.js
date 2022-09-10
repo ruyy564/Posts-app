@@ -7,6 +7,7 @@ const Input = styled.input`
   border: 4px solid var(--blue-water);
   border-radius: 10px;
   background-color: #d9d9d9;
+
   @media (max-width: 550px) {
     margin-top: 8px;
     width: 212px;

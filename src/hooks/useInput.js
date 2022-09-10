@@ -6,11 +6,7 @@ const useInput = (init) => {
     setValue(event.target.value);
   };
 
-  const clear = () => {
-    setValue('');
-  };
-
-  return { value, onChange, clear };
+  return { value, onChange };
 };
 
 export default useInput;

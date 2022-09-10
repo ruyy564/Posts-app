@@ -1,4 +1,4 @@
-export const SERVER_URL = 'http://localhost:3001/';
+export const SERVER_AUTH = 'http://localhost:3001/';
 export const SERVER_POSTS = 'https://jsonplaceholder.typicode.com/';
 export const ACCESS_TOKEN = 'ACCESS_TOKEN';
 export const IS_AUTH = 'IS_AUTH';
@@ -9,3 +9,4 @@ export const FETCH_LOGOUT = 'FETCH_LOGOUT';
 export const FETCH_POST = 'FETCH_POST';
 export const FETCH_POST_SUCCESS = 'FETCH_POST_SUCCESS';
 export const FETCH_POST_ERROR = 'FETCH_POST_ERROR';
+export const POST_ERROR = 'Error: failed to load posts';

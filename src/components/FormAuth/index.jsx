@@ -1,15 +1,15 @@
-import Form from './Form';
-import Title from './Title';
-import Wrapper from './Wrapper';
-import Input from './Input';
-import ButtonSubmit from './ButtonSubmit';
+import { useSelector } from 'react-redux';
 import useInput from '../../hooks/useInput';
 import useActions from '../../hooks/useActions';
-import { useSelector } from 'react-redux';
+import Form from './Form';
+import Title from './Title';
+import Input from '../Input/';
+import ButtonSubmit from './ButtonSubmit';
+import Error from '../Error/';
 
 const FormAuth = () => {
-  const { error } = useSelector((state) => state.auth);
   const { fetchAuth } = useActions();
+  const { error } = useSelector((state) => state.auth);
   const login = useInput('');
   const password = useInput('');
 
@@ -19,17 +19,10 @@ const FormAuth = () => {
 
   return (
     <Form onSubmit={(e) => e.preventDefault()}>
-      {error && <span>{error}</span>}
       <Title>Autorization</Title>
-
-      <Wrapper>
-        <span>login</span>
-        <Input type="text" {...login} />
-      </Wrapper>
-      <Wrapper>
-        <span>password</span>
-        <Input type="text" {...password} />
-      </Wrapper>
+      {error && <Error>{error}</Error>}
+      <Input name="login" type="text" input={{ ...login }} />
+      <Input name="password" type="password" input={{ ...password }} />
       <ButtonSubmit onClick={auth}>Submit</ButtonSubmit>
     </Form>
   );

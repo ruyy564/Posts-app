@@ -5,6 +5,7 @@ const Text = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   @media (max-width: 1045px) {
     height: 160px;
   }

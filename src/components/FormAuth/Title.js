@@ -5,6 +5,7 @@ const Title = styled.div`
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
+
   @media (max-width: 550px) {
     margin-bottom: 0px;
   }

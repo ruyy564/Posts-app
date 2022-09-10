@@ -1,10 +1,11 @@
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Header from '../components/Header/';
 import Post from '../components/Post/';
 import Container from '../components/Container';
 import useActions from '../hooks/useActions';
 import Loader from '../components/Loader';
-import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import Error from '../components/Error';
 
 const MainPage = () => {
   const { fetchPost } = useActions();
@@ -18,10 +19,10 @@ const MainPage = () => {
     <>
       <Header />
       <Container>
-        {error && <span>{error}</span>}
+        {error && <Error>{error}</Error>}
         {loading && <Loader />}
         {posts.map((post) => {
-          return <Post key={post.title} {...post} />;
+          return <Post key={post.id} {...post} />;
         })}
       </Container>
     </>

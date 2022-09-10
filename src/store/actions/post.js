@@ -4,6 +4,7 @@ import {
   FETCH_POST,
   FETCH_POST_ERROR,
   FETCH_POST_SUCCESS,
+  POST_ERROR,
 } from '../../constants';
 
 export const fetchPost = () => async (dispatch) => {
@@ -24,6 +25,7 @@ export const fetchPost = () => async (dispatch) => {
       const [photo] = await photoData.data;
 
       result.push({
+        id: post.id,
         author: user.name,
         company: user.company.name,
         title: post.title,
@@ -34,6 +36,6 @@ export const fetchPost = () => async (dispatch) => {
 
     dispatch({ type: FETCH_POST_SUCCESS, payload: result });
   } catch (e) {
-    dispatch({ type: FETCH_POST_ERROR, payload: e.response.data });
+    dispatch({ type: FETCH_POST_ERROR, payload: POST_ERROR });
   }
 };

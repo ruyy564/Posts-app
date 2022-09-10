@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  SERVER_URL,
+  SERVER_AUTH,
   ACCESS_TOKEN,
   IS_AUTH,
   USERNAME,
@@ -11,7 +11,7 @@ import {
 
 export const fetchAuth = (payload) => async (dispatch) => {
   try {
-    const response = await axios.post(`${SERVER_URL}login`, payload);
+    const response = await axios.post(`${SERVER_AUTH}login`, payload);
 
     localStorage.setItem(ACCESS_TOKEN, response.data.accessToken);
     localStorage.setItem(IS_AUTH, true);

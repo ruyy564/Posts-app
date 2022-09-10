@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const HeaderStyled = styled.header`
   background-color: var(--cream);
   height: 118px;
-  padding: 27px 37px 28px 41px;
+  padding: 27px 29px 28px 41px;
 
   @media (max-width: 744px) {
     padding: 27px 37px 28px 37px;

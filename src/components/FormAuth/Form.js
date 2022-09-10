@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Form = styled.form`
+  position: relative;
   margin: 229px auto 0 auto;
   padding: 40px 17px 23px 15px;
   display: flex;

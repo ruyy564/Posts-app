@@ -4,8 +4,9 @@ const AuthorInfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 21px;
+
   @media (max-width: 1045px) {
-    height: 252px;
+    height: 248px;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 0;

@@ -5,7 +5,8 @@ import TitleWrapper from './TitleWrapper';
 import Title from './Title';
 import Text from './Text';
 import Description from './Description';
-
+import styled from 'styled-components';
+const T = styled.p``;
 const Post = ({ author, title, company, body, img }) => {
   return (
     <PostStyled>
@@ -17,7 +18,7 @@ const Post = ({ author, title, company, body, img }) => {
         </TitleWrapper>
       </AuthorInfoWrapper>
       <Text>
-        <p>Title:{title}</p>
+        <T>Title:{title}</T>
         <Description>{body}</Description>
       </Text>
     </PostStyled>
