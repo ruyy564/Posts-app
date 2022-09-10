@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "email": "test@yandex.ru",
+      "username": "test-name",
+      "password": "$2a$10$eB5pjamHaaCd04ymUfaktOgN.08SfRDxb1EfR8fIULZvMz3QTVyI2",
+      "id": 1
+    }
+  ]
+}

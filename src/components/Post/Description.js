@@ -1,0 +1,9 @@
+import styled from 'styled-components';
+
+const Description = styled.p`
+  @media (max-width: 715px) {
+    display: none;
+  }
+`;
+
+export default Description;
