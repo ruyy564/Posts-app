@@ -1,4 +1,5 @@
-export const SERVER_AUTH = 'http://localhost:3001/';
+// export const SERVER_AUTH = 'http://localhost:3001/';
+export const SERVER_AUTH = 'https://posts-app1.herokuapp.com/api/';
 export const SERVER_POSTS = 'https://jsonplaceholder.typicode.com/';
 export const ACCESS_TOKEN = 'ACCESS_TOKEN';
 export const IS_AUTH = 'IS_AUTH';

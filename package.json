@@ -19,7 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "start":"node server.js",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
     "client": "react-scripts start",
     "server": "json-server --watch db.json -m ./node_modules/json-server-auth -p 3001",
     "build": "react-scripts build",
